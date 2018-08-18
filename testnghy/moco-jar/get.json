@@ -1,0 +1,125 @@
+[
+    {
+        "description":"this is a get 请求",
+        "request": {
+            "uri": "/demo/get",
+            "method": "get"
+        },
+        "response": {
+            "text": "这是一个moco模拟的get无参数请求",
+            "headers": {
+                "Content-Type": "text/html;charset=GBK"
+            }
+        }
+    },
+    {
+        "description": "这是有参数的get请求",
+        "request": {
+            "uri": "/param",
+            "method": "get",
+            "queries": {
+                "name": "huhansan",
+                "age": "18"
+            }
+        },
+        "response": {
+            "text": "胡汉三又回来了",
+            "headers": {
+                "Content-Type": "text/html;charset=GBK"
+            }
+        }
+    },
+    {
+        "description": "模拟一个post",
+        "request":{
+            "uri": "/postdemo",
+            "method":"post"
+        },
+        "response":{
+            "text": "这是一个post请求",
+            "headers": {
+                "Content-Type": "text/html;charset=GBK"
+            }
+        }
+    },
+    {
+        "description":"模拟一个带参数的post请求",
+        "request": {
+            "uri": "/postdemo2",
+            "method": "post",
+            "forms": {
+                "name": "胡汉三",
+                "age": "18"
+            }
+        },
+        "response": {
+            "text":"我是一个带参数的Post请求",
+            "headers": {
+                "Content-Type": "text/html;charset=GBK"
+            }
+        }
+
+    },
+    {
+        "description": "发送带cookie的get请求",
+        "request":{
+            "uri":"/get/cookie",
+            "method": "get",
+            "cookies":{
+                "login":"true"
+            }
+        },
+        "response":{
+            "text":"this is a get request with cookie"
+        }
+    },
+    {
+        "description":"这是一个post带参数，带cookie的请求",
+        "request":{
+            "uri":"/post/with/cookie",
+            "method":"post",
+            "cookies":{
+                "login":"true"
+            },
+            "json":{
+                "name":"huhansan",
+                "age":"18"
+            }
+        },
+        "response":{
+            "status":200,
+            "json":{
+                "status":"1",
+                "huhansan":"我回来了"
+            }
+        }
+    },
+    {
+        "description":"这是一个post带请求头",
+        "request":{
+            "uri":"/post/with/header",
+            "method":"post",
+            "headers":{
+                "content-type":"application/json"
+            },
+            "json":{
+                "name":"huhansan",
+                "age":"18"
+            }
+        },
+        "response":{
+            "status":200,
+            "json":{
+                "status":1,
+                "huhansan":"我又回来了"
+            }
+        }
+    },
+    {
+        "description":"这是一个重定向",
+        "request":{
+            "uri":"/redirect"
+        },
+        "redirectTo":"https://www.baidu.com"
+    }
+]
