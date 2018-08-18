@@ -1,5 +1,21 @@
 [
     {
+        "description": "这是一个getcookies请求",
+        "request":{
+            "uri":"/getCookies",
+            "method":"get"
+        },
+        "response":{
+            "text":"恭喜你获得cookies",
+            "cookies":{
+                "ck":"jjjj8888"
+            },
+            "headers":{
+                "Content-Type": "text/html;charset=GBK"
+            }
+        }
+    },
+    {
         "description":"this is a get 请求",
         "request": {
             "uri": "/demo/get",
